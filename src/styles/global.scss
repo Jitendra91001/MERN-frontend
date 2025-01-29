@@ -1,0 +1,69 @@
+@import './variable.scss';
+@import './resonsive.scss';
+// body {
+//   background-color: $light-gray;
+//   min-height: 100vh;
+//   @include flex-center;
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main{
+  font-family: "Inter" , sans-serif;
+  background-color: $main-bg;
+  color: $main-color;
+}
+
+.container{
+  display: flex;
+
+  // @include xxl {
+  //   background-color: rgb(189, 155, 252);
+  // }
+
+  // @include xl {
+  //   background-color: rgb(62, 62, 63);
+  // }
+
+  // @include lg {
+  //   background-color: rgb(86, 111, 112);
+  // }
+
+  // @include md {
+  //   background-color: rgb(76, 126, 93);
+  // }
+
+  // @include sm {
+  //   background-color: rgb(80, 74, 44);
+  // }
+
+}
+
+.manucontainer{
+  width: 250px;
+  // margin-left: 5px;
+  padding: 5px 20px;
+  border-right: 1px solid $soft-color;
+
+
+  @include lg{
+    width: max-content;
+  }
+}
+
+.contentContainer{
+  padding: 5px 10px;
+  width: 100%;  
+}
+

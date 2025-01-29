@@ -1,0 +1,21 @@
+@import '../../styles/resonsive.scss';
+.bigchart{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1{
+        @include xxl{
+            font-size: 24px;
+        }
+    }
+
+
+
+    .charts{
+        width: 100%;
+        height: 300px;
+    }
+}
