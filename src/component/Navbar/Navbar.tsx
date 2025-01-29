@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import { useState } from 'react';
 import { IconButton, Menu, MenuItem } from '@mui/material';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux_hooks';
 import './navbar.scss'
@@ -13,11 +13,6 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     const user = useAppSelector<any>((s) => s.authData.logedInUser);
-
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setAuth(event.target.checked);
-    };
-
     const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
     };

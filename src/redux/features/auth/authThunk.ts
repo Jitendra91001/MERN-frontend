@@ -25,7 +25,7 @@ export const loginUser = createAsyncThunk("auth/login", async (payload: any, Thu
 
 export const logoutUser = createAsyncThunk("auth/lotout", async (payload: any, Thunk) => {
   try {
-      const response = await api.get(apiConstants.auth.logout);
+      const response = await api.get(apiConstants.auth.logout,payload ? payload : null);
       return response?.data;
   }
   catch (error: any) {

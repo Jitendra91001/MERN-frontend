@@ -14,7 +14,7 @@ export const productSlice = createSlice({
     },
     extraReducers: (builder:any) => {
       //signUP
-      builder.addCase(getProducts.pending, (state:any, action:any) => {
+      builder.addCase(getProducts.pending, (state:any) => {
         state.pending = true;
       }),
       builder.addCase(getProducts.fulfilled, (state:any, action:any) => {

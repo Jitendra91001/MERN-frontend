@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {signUserData } from './authThunk'
 import { createUser } from './userThunk'
 
 export const initialState = {
@@ -14,7 +13,7 @@ export const userSlice = createSlice({
     reducers: {
     },
     extraReducers: (builder) => {
-      builder.addCase(createUser.pending, (state, action) => {
+      builder.addCase(createUser.pending, (state) => {
         state.pending = true;
       }),
       builder.addCase(createUser.fulfilled, (state:any, action:any) => {

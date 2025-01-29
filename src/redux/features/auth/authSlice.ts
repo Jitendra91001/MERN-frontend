@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import {loginUser, logoutUser, signUserData } from './authThunk'
+import { loginUser, logoutUser, signUserData } from './authThunk';
 
 export const initialState = {
     error:false,
@@ -17,7 +17,7 @@ export const authSlice = createSlice({
     },
     extraReducers: (builder) => {
       //signUP
-      builder.addCase(signUserData.pending, (state, action) => {
+      builder.addCase(signUserData.pending, (state) => {
         state.pending = true;
       }),
       builder.addCase(signUserData.fulfilled, (state:any, action:any) => {
@@ -32,7 +32,7 @@ export const authSlice = createSlice({
       })
 
       //login
-      builder.addCase(loginUser.pending, (state, action) => {
+      builder.addCase(loginUser.pending, (state) => {
         state.pending = true;
         state.isLogedIn = false
 
@@ -50,10 +50,10 @@ export const authSlice = createSlice({
         state.isLogedIn = false
       })
 
-      builder.addCase(logoutUser.pending, (state, action) => {
+      builder.addCase(logoutUser.pending, (state) => {
         state.pending = true;
       }),
-      builder.addCase(logoutUser.fulfilled, (state:any, action:any) => {
+      builder.addCase(logoutUser.fulfilled, (state:any) => {
         state.logedInUser = null;
         state.pending = false;
       }),
