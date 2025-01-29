@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { pathConstant } from '../../constents/pathConstant';
 const Navbar = () => {
-    const [auth, setAuth] = useState(true);
+    const [auth, _] = useState(true);
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
