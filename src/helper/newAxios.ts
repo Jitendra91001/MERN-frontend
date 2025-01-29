@@ -10,8 +10,8 @@ const getStore = async () => {
 const newAxios = Axios.create({});
 
 // const url = import.meta.env.API_URL;
-// const url = 'https://backend-auth-ecommerec-api-node-js.onrender.com/api/v1/';
-const url = 'http://localhost:4000/api/v1/'
+const url = 'https://backend-auth-ecommerec-api-node-js.onrender.com/api/v1/';
+// const url = 'http://localhost:4000/api/v1/'
 export const baseURL = `${url}`;
 
 newAxios.defaults.timeout =10000000
